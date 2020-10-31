@@ -1,17 +1,25 @@
-<h1 class="container text-white text-center bg-dark my-4 py-4">ngClass</h1>
+<h1 class="container text-white text-center bg-dark my-4 py-4">ngFor</h1>
 <div class="container">
-  <button class="btn btn-warning mr-3" (click)="activo = 'primero'">Primero</button>
-  <button class="btn btn-danger" (click)="activo = 'segundo'">Segundo</button>
+  <ul>
+    <li *ngFor="let curso of cursos">{{ curso }}</li>
+  </ul>
 
-  <p class="text-info d-none" [ngClass]="{ 'd-block': activo === 'primero' }">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit voluptatem harum ducimuscommodi optio
-    repellat? Laudantium at, facilis totam blanditiis odio ab assumenda cupiditate accusamus quos vitae iusto
-    consequuntur laborum.
-  </p>
-
-  <p class="text-danger d-none" [ngClass]="{ 'd-block': activo === 'segundo' }">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit voluptatem harum ducimus commodi optio
-    repellat? Laudantium at, facilis totam blanditiis odio ab assumenda cupiditate accusamus quos vitae iusto
-    consequuntur laborum.
-  </p>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Nro</th>
+        <th>Tipo</th>
+        <th>Nombre</th>
+        <th>Edad</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let animal of animales; index as i">
+        <td>{{ i + 1 }}</td>
+        <td>{{ animal.tipo }}</td>
+        <td>{{ animal.nombre }}</td>
+        <td>{{ animal.edad }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>

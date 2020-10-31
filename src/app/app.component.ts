@@ -6,5 +6,10 @@ import { Component } from "@angular/core";
   styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
-  activo: string = "";
+  cursos: string[] = ["Algebra", "Geometria", "Aritmetica", "Trigonmetria"];
+  animales: Array<any> = [
+    { tipo: "perro", nombre: "pepon", edad: 5 },
+    { tipo: "gato", nombre: "lucy", edad: 6 },
+    { tipo: "pato", nombre: "paco", edad: 8 },
+  ];
 }
