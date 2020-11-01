@@ -1,25 +1,5 @@
-<h1 class="container text-white text-center bg-dark my-4 py-4">ngFor</h1>
 <div class="container">
-  <ul>
-    <li *ngFor="let curso of cursos">{{ curso }}</li>
-  </ul>
-
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Nro</th>
-        <th>Tipo</th>
-        <th>Nombre</th>
-        <th>Edad</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let animal of animales; index as i">
-        <td>{{ i + 1 }}</td>
-        <td>{{ animal.tipo }}</td>
-        <td>{{ animal.nombre }}</td>
-        <td>{{ animal.edad }}</td>
-      </tr>
-    </tbody>
-  </table>
+  <app-encabezado></app-encabezado>
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
 </div>
